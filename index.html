@@ -1,54 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+<body background="b.png">
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>
-    Danya's Photography Website
-  </title>
-  <style>
-    h1.Title{
-      color: #C64EF9;
-      text-align:center
-    }
-    h1{
-      color: #4EF9E1;
-      text-align:left
-        }
-        img.bigsur{
-          width:400px;
-        }
-        img.hawaii{
-          width:400px;
-          
-        img.friends{
-          width:400px;
-          height:200px;
-        }
-        }
-  </style>
-</head>
+<div class="w3-container">
+  <h2><b>Through My Eyes</b></h2>
+  <p><i>By: Danya Sharma</i></p>
+</div>
 
-<body>
+<div class="w3-content w3-section" style="text-align:center;">
+  <div class="mySlides w3-animate-top" >
+    <h3 style="color:#FE7F01;font-family:monospace">friends</h3>
+      <img src="1.png" height="350" width="350">
+      
+  </div>
   
-  <h1 class = "Title"> Welcome to my Page!</h1>
-    <p> On here you will see my all the picture I took of different places! </p>
+  <div class="mySlides w3-animate-top" style="text-align:center;">
+    HAWAIIII
+      <img src="hawaii.PNG" height="350" width="350">
+      
+  </div>
   
-  <h1> Big Sur: </h1>
+  <img class="mySlides w3-animate-top" src="friends.png" style="width:100%">
+  <img class="mySlides w3-animate-top" src="sunrise.png" style="width:100%">
+  <img class="mySlides w3-animate-top" src="bestie.png" style="width:100%">
+  <img class="mySlides w3-animate-top" src="bestie2.png" style="width:100%">
 
-  
-  <img class= bigsur src= "1.jpg">
-  <br>
-  
-    <h1> Hawaii: </h1>
-    
-  
-  <img class = hawaii src= "hawaii.PNG">
-  
-  
-  <h1> Friends: </h1>
-  
-  <img class = friends src= "friends.png">
-  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 2500);
+}
+</script>
+
 </body>
 </html>
